@@ -41,3 +41,9 @@
 <div>
   <img width ="600" height ="500"src="https://user-images.githubusercontent.com/30828236/54477207-fd897500-4848-11e9-90ca-9e0b69ef160c.png"/>
 </div>
+
+* 메인 뷰컨트롤러와 테이블 뷰 -> reveal view controller set controller 속성의 segue 로 연결 / segue Identifier(sw_rear)
+
+* 첫 화면과 연결되는 navigationviewcontroller -> reveal view controller set controller 속성 segue / segue Identifier(sw_front)
+
+
