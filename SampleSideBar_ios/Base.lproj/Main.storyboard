@@ -32,9 +32,6 @@
                     <navigationItem key="navigationItem" id="JK8-d3-fED">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="sidemenu.png" id="mSo-DO-lrS"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="sideBarButton" destination="mSo-DO-lrS" id="Bmn-bZ-JEi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f2-z7-M3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +40,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RevealViewController" customModule="SampleSideBar_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,19 +48,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tda-3l-W7p"/>
-                    <connections>
-                        <segue destination="43R-tZ-Nnn" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="eyl-CV-EXj"/>
-                        <segue destination="F1p-5Q-7Xj" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ftd-6w-N7i"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="41" y="-370"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Side Bar View Controller-->
         <scene sceneID="IAt-hJ-uko">
             <objects>
-                <tableViewController id="43R-tZ-Nnn" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="sw_rear" id="43R-tZ-Nnn" customClass="SideBarViewController" customModule="SampleSideBar_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z8U-lk-PMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +84,7 @@
         <!--Navigation Controller-->
         <scene sceneID="QVF-Xh-oXI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F1p-5Q-7Xj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="sw_front" automaticallyAdjustsScrollViewInsets="NO" id="F1p-5Q-7Xj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ND3-za-3UO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
